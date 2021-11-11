@@ -7,11 +7,13 @@ public class Stare : MonoBehaviour
 
     private bool isLooking;
     private Transform lookingAt;
+    private Transform thisTransform;
 
     // Start is called before the first frame update
     void Start()
     {
        isLooking = false;
+        thisTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,9 @@ public class Stare : MonoBehaviour
 
             isLooking = true;
 
+            AdBehaviour ob = other.transform.parent.gameObject.GetComponent<AdBehaviour>();
+            ob.LookAt(thisTransform);
+
             lookingAt = other.transform;            
         }
     }
@@ -40,6 +45,9 @@ public class Stare : MonoBehaviour
     {
         isLooking = false;
         Debug.Log("stopped looking");
+
+        AdBehaviour ob = other.transform.parent.gameObject.GetComponent<AdBehaviour>();
+        ob.StopLooking();
     }
 
 }
