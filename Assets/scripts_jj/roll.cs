@@ -6,10 +6,35 @@ public class roll : MonoBehaviour
 {
     public int speed = 300;
     bool isMoving = false;
+    bool movingStarted = false;
+
+    public Material dissolver;
+
+    private void Start()
+    {
+        if (!movingStarted)
+        {
+            dissolver.SetFloat("AlphaClip", 1);
+        }
+    }
 
     void Update() {
-        if (isMoving) {
-            return;
+
+        if (movingStarted){
+            if (isMoving)
+            {
+                dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 0, Time.deltaTime * 90));
+                //dissolver.SetFloat("Vector1_be3dc4a8bafa438e81f5f78631688d8b", Mathf.Lerp(2, 1, 1));   
+                // dissolver.SetFloat("BOOLEAN_E78A83844EA143DEB611A61F33BB2ESA", 1);
+                return;
+
+            }
+
+            if (!isMoving){
+                dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 2, Time.deltaTime));
+                //dissolver.SetFloat("Vector1_be3dc4a8bafa438e81f5f78631688d8b", Mathf.Lerp(1, 2, 1));
+                //dissolver.SetFloat("BOOLEAN_E78A83844EA143DEB611A61F33BB2ESA", 0);
+            }
         }
 
         if (Input.GetKey(KeyCode.RightArrow)) {
@@ -21,10 +46,12 @@ public class roll : MonoBehaviour
         } else if (Input.GetKey(KeyCode.DownArrow)) {
             StartCoroutine(Roll(Vector3.back));
         }
+
     }
 
     IEnumerator Roll(Vector3 direction) {
         isMoving = true;
+        movingStarted = true;
 
         float remainingAngle = 90;
         Vector3 rotationCenter = transform.position + direction / 2 + Vector3.down / 2;
@@ -37,6 +64,7 @@ public class roll : MonoBehaviour
             yield return null;
         }
 
+        dissolver.SetFloat("AlphaClip", 2);
         isMoving = false;
     }
 }
