@@ -9,6 +9,11 @@ public class NPCmovement : MonoBehaviour
     [SerializeField]
     private int speed = 300;
     private bool isMoving = false;
+    //I know it's inelegant but the order of the array must be: up, down, left, right ; To match the directions
+    [SerializeField]
+    private ReportCollision[] NPCColliderObjects;
+    private Vector3[] directions = new[] { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
+    int index;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +24,17 @@ public class NPCmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isMoving == false)
+        {
+            index = Random.Range(0, directions.Length);
+            if (NPCColliderObjects[index].getCollisionStatus() == false)
+            {
+
+                StartCoroutine(Roll(directions[index]));
+            }
+            
+        }
+
     }
 
     IEnumerator Roll(Vector3 direction)

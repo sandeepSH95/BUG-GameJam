@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ad
   - AdBroadcast
+  - adPlane
+  - pawn
+  - deterrance
+  - deter
   layers:
   - Default
   - TransparentFX
