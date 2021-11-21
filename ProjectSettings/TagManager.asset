@@ -10,7 +10,6 @@ TagManager:
   - pawn
   - deterrance
   - deter
-  - security
   layers:
   - Default
   - TransparentFX
