@@ -54,7 +54,7 @@ namespace Niantic.ARDK.Rendering
       Identifier = new RenderTargetIdentifier(texture);
       
       _defaultOrientation = RenderTexture.width > RenderTexture.height
-        ? ScreenOrientation.Landscape
+        ? ScreenOrientation.LandscapeLeft
         : ScreenOrientation.Portrait;
     }
 

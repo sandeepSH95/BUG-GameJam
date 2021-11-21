@@ -140,7 +140,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
 
       #if UNITY_EDITOR
-      var currentOrientation = Screen.width > Screen.height ? ScreenOrientation.Landscape : ScreenOrientation.Portrait;
+      var currentOrientation = Screen.width > Screen.height ? ScreenOrientation.LandscapeLeft : ScreenOrientation.Portrait;
       #else
       var currentOrientation = Screen.orientation;
       #endif
@@ -362,7 +362,7 @@ namespace Niantic.ARDK.AR.Awareness
       var bufferHeight = (int)forBuffer.Height;
 
       var bufferOrientation = bufferWidth > bufferHeight
-        ? ScreenOrientation.Landscape
+        ? ScreenOrientation.LandscapeLeft
         : ScreenOrientation.Portrait;
       var rotateContainer = bufferOrientation != usingOrientation;
       var width = rotateContainer ? bufferHeight : bufferWidth;
@@ -388,7 +388,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
       
       if (texture.width != width || texture.height != height)
-        texture.Resize(width, height);
+        texture.Reinitialize(width, height);
 
       return true;
     }

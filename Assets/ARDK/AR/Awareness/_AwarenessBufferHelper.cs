@@ -186,7 +186,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
       
       if (texture.width != width || texture.height != height)
-        texture.Resize(width, height);
+        texture.Reinitialize(width, height);
 
       if (texture.filterMode != filterMode)
         texture.filterMode = filterMode;
@@ -237,7 +237,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
       
       if (texture.width != width || texture.height != height)
-        texture.Resize(width, height);
+        texture.Reinitialize(width, height);
       
       if (texture.filterMode != filterMode)
         texture.filterMode = filterMode;
@@ -288,7 +288,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
 
       if (texture.width != width || texture.height != height)
-        texture.Resize(width, height);
+        texture.Reinitialize(width, height);
 
       if (texture.filterMode != filterMode)
         texture.filterMode = filterMode;
@@ -340,7 +340,7 @@ namespace Niantic.ARDK.AR.Awareness
       }
 
       if (texture.width != width || texture.height != height)
-        texture.Resize(width, height);
+        texture.Reinitialize(width, height);
 
       if (texture.filterMode != filterMode)
         texture.filterMode = filterMode;

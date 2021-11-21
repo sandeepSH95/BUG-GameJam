@@ -7,7 +7,7 @@ using System.Linq;
 using System.Timers;
 using Niantic.ARDK.Networking.HLAPI.Routing;
 using UnityEditor;
-using UnityEditor.Experimental.SceneManagement;
+
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
@@ -40,7 +40,7 @@ namespace Niantic.ARDK.Networking.HLAPI.Object.Unity.Helpers {
     private void UpdateNetworkedBehavioursList(NetworkedUnityObject obj) {
       // If we're in the prefab stage, we can handle things knowing that we're modifying the prefab
       // directly.
-      if (PrefabStageUtility.GetCurrentPrefabStage() != null) {
+      if (UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() != null) {
         // Regenerate the behaviour list in place
         obj._behaviours = obj.GetComponents<NetworkedBehaviour>();
       } else if (PrefabUtility.IsPartOfPrefabInstance(obj) &&
@@ -77,7 +77,7 @@ namespace Niantic.ARDK.Networking.HLAPI.Object.Unity.Helpers {
       // We want to first ensure we are selecting an instance, not a prefab.
       if
       (
-        PrefabStageUtility.GetCurrentPrefabStage() == null &&
+        UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage() == null &&
         PrefabUtility.IsPartOfPrefabInstance(netUniObj) &&
         !PrefabUtility.IsPrefabAssetMissing(netUniObj)
       )
