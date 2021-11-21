@@ -24,7 +24,7 @@ public class ReportCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //isColliding = true;
-        if(other.gameObject.CompareTag("adPlane") || other.gameObject.CompareTag("deter"))
+        if(other.gameObject.CompareTag("adPlane") || other.gameObject.CompareTag("deter") || other.gameObject.CompareTag("security"))
         {
             return;
 
@@ -38,7 +38,7 @@ public class ReportCollision : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("adPlane") || other.gameObject.CompareTag("deter"))
+        if (other.gameObject.CompareTag("adPlane") || other.gameObject.CompareTag("deter") || other.gameObject.CompareTag("security"))
         {
             return;
 
