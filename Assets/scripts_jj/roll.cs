@@ -8,13 +8,13 @@ public class roll : MonoBehaviour
     bool isMoving = false;
     bool movingStarted = false;
 
-    public Material dissolver;
+    //public Material dissolver;
 
     private void Start()
     {
         if (!movingStarted)
         {
-            dissolver.SetFloat("AlphaClip", 1);
+            //dissolver.SetFloat("AlphaClip", 1);
         }
     }
 
@@ -23,7 +23,7 @@ public class roll : MonoBehaviour
         if (movingStarted){
             if (isMoving)
             {
-                dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 0, Time.deltaTime * 90));
+                //dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 0, Time.deltaTime * 90));
                 //dissolver.SetFloat("Vector1_be3dc4a8bafa438e81f5f78631688d8b", Mathf.Lerp(2, 1, 1));   
                 // dissolver.SetFloat("BOOLEAN_E78A83844EA143DEB611A61F33BB2ESA", 1);
                 return;
@@ -31,7 +31,7 @@ public class roll : MonoBehaviour
             }
 
             if (!isMoving){
-                dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 2, Time.deltaTime));
+                //dissolver.SetFloat("AlphaClip", Mathf.Lerp(1, 2, Time.deltaTime));
                 //dissolver.SetFloat("Vector1_be3dc4a8bafa438e81f5f78631688d8b", Mathf.Lerp(1, 2, 1));
                 //dissolver.SetFloat("BOOLEAN_E78A83844EA143DEB611A61F33BB2ESA", 0);
             }
@@ -64,7 +64,7 @@ public class roll : MonoBehaviour
             yield return null;
         }
 
-        dissolver.SetFloat("AlphaClip", 2);
+        //dissolver.SetFloat("AlphaClip", 2);
         isMoving = false;
     }
 }
