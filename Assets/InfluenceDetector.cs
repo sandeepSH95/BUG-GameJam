@@ -35,6 +35,7 @@ public class InfluenceDetector : MonoBehaviour
         {
             influence++;
             Debug.Log("inflience++ " + this.name);
+            Destroy(collision.gameObject);
         }
     }
 

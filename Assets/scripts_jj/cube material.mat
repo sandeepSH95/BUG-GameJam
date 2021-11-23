@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cube material
-  m_Shader: {fileID: -6465566751694194690, guid: 28129fabbafa54edf83607554c281ce1, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 14338b670fea647b89143ee05c92032d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -90,7 +90,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - AlphaClip: 0.292
+    - AlphaClip: 0.541
     - BOOLEAN_E78A83844EA143DEB611A61F33BB2E5A: 0
     - Vector1_af01eff607a6414fb7961752f8eab55a: -0.13
     - Vector1_be3dc4a8bafa438e81f5f78631688d8b: 2
