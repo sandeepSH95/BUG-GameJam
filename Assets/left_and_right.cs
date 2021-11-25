@@ -16,11 +16,11 @@ public class left_and_right : MonoBehaviour
     {
         transform.Translate(dir * speed * Time.deltaTime);
 
-        if (transform.position.x <= x_max)
+        if (transform.position.x <= x_min)
         {
             dir = Vector3.right;
         }
-        else if (transform.position.x >= x_min)
+        else if (transform.position.x >= x_max)
         {
             dir = Vector3.left;
         }

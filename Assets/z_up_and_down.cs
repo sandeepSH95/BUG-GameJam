@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class up_and_down : MonoBehaviour
+public class z_up_and_down : MonoBehaviour
 {
     public float speed;
-    public int y_max;
-    public int y_min;
+    public int z_max;
+    public int z_min;
 
 
     private Vector3 dir = Vector3.forward;
@@ -16,14 +16,13 @@ public class up_and_down : MonoBehaviour
     {
         transform.Translate(dir * speed * Time.deltaTime);
 
-        if (transform.position.y <= y_min)
+        if (transform.position.z <= z_min) 
         {
             dir = Vector3.forward;
         }
-        else if (transform.position.y >= y_max)
+        else if (transform.position.z >= z_max)
         {
             dir = Vector3.back;
         }
     }
-
 }

@@ -16,19 +16,19 @@ public class roll : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            StartCoroutine(Roll(Vector3.right));
+            StartCoroutine(Roll(Vector3.left));
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            StartCoroutine(Roll(Vector3.left));
+            StartCoroutine(Roll(Vector3.right));
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            StartCoroutine(Roll(Vector3.forward));
+            StartCoroutine(Roll(Vector3.back));
         }
         else if (Input.GetKey(KeyCode.UpArrow))
         {
-            StartCoroutine(Roll(Vector3.back));
+            StartCoroutine(Roll(Vector3.forward));
         }
     }
 
