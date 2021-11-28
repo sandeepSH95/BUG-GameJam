@@ -12,7 +12,8 @@ public class player_detect_destroy_Self : MonoBehaviour
     {
         if (other.gameObject.tag == "adPlane")
         {
-            Instantiate(EnemyDeath, transform.position, Quaternion.identity);
+            ParticleSystem particle = Instantiate(EnemyDeath, transform.position, Quaternion.identity);
+            particle.Play();
             Destroy(gameObject);
             
             print("ENTER");
