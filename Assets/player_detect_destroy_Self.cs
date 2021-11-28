@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class enemy_vision_collider : MonoBehaviour
+public class player_detect_destroy_Self : MonoBehaviour
+
 {
+    [Header("Paticle System")]
+    public ParticleSystem EnemyDeath;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "adPlane")
         {
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("LV3");
+            Destroy(gameObject);
+            Instantiate(EnemyDeath, transform.position, Quaternion.identity);
             print("ENTER");
         }
     }

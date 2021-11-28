@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfluenceScore : MonoBehaviour
 {
-    [SerializeField]
+    /*[SerializeField]
     private InfluenceDetector[] influenceDetectors;
     [SerializeField]
     private int score;
@@ -35,5 +35,5 @@ public class InfluenceScore : MonoBehaviour
         scoreDisplay += score;
         textDisplay.text = scoreDisplay.ToString();
 
-    }
+    }*/
 }

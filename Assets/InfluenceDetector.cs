@@ -19,31 +19,15 @@ public class InfluenceDetector : MonoBehaviour
         
     }
 
-    public void ResetInfluence()
-    {
-        influence = 0;
-    }
-
-    public int getInfluence()
-    {
-        return influence;
-    }
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("pawn"))
         {
-            influence++;
-            Debug.Log("inflience++ " + this.name);
+            //influence++;
+            //Debug.Log("inflience++ " + this.name);
             Destroy(collision.gameObject);
-        }
-    }
+            
 
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("pawn"))
-        {
-            influence--;
         }
     }
 

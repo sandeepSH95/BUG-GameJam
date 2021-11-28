@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class lazer_collider : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class lazer_collider : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
-            Application.LoadLevel(0);
+            SceneManager.LoadScene ("LV3");
             print("ENTER");
         }
     }

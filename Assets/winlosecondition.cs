@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class winlosecondition : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class winlosecondition : MonoBehaviour
 
         if (numberofpawn == 4)
         {
-            //EditorApplication.isPlaying = false;
+            SceneManager.LoadScene("LV3");
         }
     }
 
