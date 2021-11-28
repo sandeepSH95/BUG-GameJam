@@ -12,7 +12,7 @@ public class winlosecondition : MonoBehaviour
 
         print(numberofpawn);
 
-        if (numberofpawn == 4)
+        if (numberofpawn == 0)
         {
             SceneManager.LoadScene("LV3");
         }

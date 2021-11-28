@@ -12,8 +12,9 @@ public class player_detect_destroy_Self : MonoBehaviour
     {
         if (other.gameObject.tag == "adPlane")
         {
-            Destroy(gameObject);
             Instantiate(EnemyDeath, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            
             print("ENTER");
         }
     }
