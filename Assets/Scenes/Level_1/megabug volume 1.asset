@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: megabug volume
+  m_Name: megabug volume 1
   m_EditorClassIdentifier: 
   components:
   - {fileID: 6705426655363671954}
@@ -162,7 +162,7 @@ MonoBehaviour:
     m_Value: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: -85
+    m_Value: -53.3
   saturation:
     m_OverrideState: 1
     m_Value: 100

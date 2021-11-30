@@ -21,7 +21,7 @@ public class roll : MonoBehaviour
             ParticleSystem particle = Instantiate(PlayerDeath, transform.position, Quaternion.identity);
             particle.Play();
             Destroy(gameObject);
-            Invoke("GameOver", 1);
+            GameOver();
 
             //SceneManager.LoadScene("Main Menu");
             print("ENTER");
