@@ -10,7 +10,7 @@ TagManager:
   - pawn
   - deterrance
   - deter
-  - Enemy
+  - terrain
   layers:
   - Default
   - TransparentFX
