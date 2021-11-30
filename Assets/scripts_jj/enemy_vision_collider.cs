@@ -10,8 +10,7 @@ public class enemy_vision_collider : MonoBehaviour
     {
         if (other.gameObject.tag == "adPlane")
         {
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("LV3");
+            SceneManager.LoadScene("Main Menu");
             print("ENTER");
         }
     }

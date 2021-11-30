@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f1d58e03e066a478f9a51c8915f9082a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Nico Moji
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 25eb40c3ae144401eb230b2d53f7310e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

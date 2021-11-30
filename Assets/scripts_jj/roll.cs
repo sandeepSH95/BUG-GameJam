@@ -1,11 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class roll : MonoBehaviour
 {
     public int speed = 300;
     bool isMoving = false;
+
+    [Header("Paticle System")]
+    public ParticleSystem PlayerDeath;
+
+    public GameObject GameoverCanvas;
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            ParticleSystem particle = Instantiate(PlayerDeath, transform.position, Quaternion.identity);
+            particle.Play();
+            Destroy(gameObject);
+            Invoke("GameOver", 1);
+
+            //SceneManager.LoadScene("Main Menu");
+            print("ENTER");
+
+        }
+    }
+
+    public void GameOver()
+    {
+        GameoverCanvas.SetActive(true);
+
+    }
 
     void Update()
     {
@@ -50,4 +78,6 @@ public class roll : MonoBehaviour
 
         isMoving = false;
     }
+
+
 }
