@@ -10,7 +10,7 @@ public class player_detect_destroy_Self : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "adPlane")
+        if (other.gameObject.tag == "Player")
         {
             ParticleSystem particle = Instantiate(EnemyDeath, transform.position, Quaternion.identity);
             particle.Play();
