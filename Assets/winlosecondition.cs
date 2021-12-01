@@ -17,6 +17,11 @@ public class winlosecondition : MonoBehaviour
         {
             SceneManager.LoadScene(NextLevel);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
 }

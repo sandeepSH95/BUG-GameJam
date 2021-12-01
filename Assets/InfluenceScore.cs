@@ -14,7 +14,7 @@ public class InfluenceScore : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {s th
         InvokeRepeating("CheckSurroundings", 1f, 1f);
     }
 
