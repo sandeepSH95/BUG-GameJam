@@ -34,6 +34,11 @@ public class RollPlus : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+    }
+
     public void GameOver()
     {
         GameoverCanvas.SetActive(true);

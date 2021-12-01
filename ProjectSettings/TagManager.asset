@@ -11,6 +11,8 @@ TagManager:
   - deterrance
   - deter
   - terrain
+  - Enemy
+  - Music
   layers:
   - Default
   - TransparentFX
