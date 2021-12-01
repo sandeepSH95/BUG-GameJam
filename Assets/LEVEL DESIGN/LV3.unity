@@ -4733,6 +4733,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922697898}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1933964286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1726625393797899299, guid: 0e4b8aebcc53942ccb685f0eddd0bdac, type: 3}
+  m_PrefabInstance: {fileID: 1726625392600433676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1935003234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,7 +5119,7 @@ MonoBehaviour:
   leftCollider: {fileID: 426955577}
   rightCollider: {fileID: 1618177115}
   PlayerDeath: {fileID: 2110011}
-  GameoverCanvas: {fileID: 0}
+  GameoverCanvas: {fileID: 1933964286}
 --- !u!114 &2083602875
 MonoBehaviour:
   m_ObjectHideFlags: 0

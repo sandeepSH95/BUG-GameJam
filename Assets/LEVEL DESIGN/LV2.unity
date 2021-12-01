@@ -2937,6 +2937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e4b8aebcc53942ccb685f0eddd0bdac, type: 3}
+--- !u!1 &1363292812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1726625393797899299, guid: 0e4b8aebcc53942ccb685f0eddd0bdac, type: 3}
+  m_PrefabInstance: {fileID: 1363292811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1464657310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,7 +3672,7 @@ MonoBehaviour:
   leftCollider: {fileID: 684404070}
   rightCollider: {fileID: 893325624}
   PlayerDeath: {fileID: 1637472568}
-  GameoverCanvas: {fileID: 0}
+  GameoverCanvas: {fileID: 1363292812}
 --- !u!114 &1690412845
 MonoBehaviour:
   m_ObjectHideFlags: 0
