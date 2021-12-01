@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 1728917387}
   - component: {fileID: 1728917389}
   - component: {fileID: 1728917390}
+  - component: {fileID: 1728917391}
   m_Layer: 5
   m_Name: Press any key
   m_TagString: Untagged
@@ -713,6 +714,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destination: LV1
+--- !u!111 &1728917391
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728917385}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d59ae5cbd9cb54537be8644d7d4b0498, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1911059083
 GameObject:
   m_ObjectHideFlags: 0
