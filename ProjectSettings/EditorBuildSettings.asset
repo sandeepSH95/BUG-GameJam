@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LEVEL DESIGN/LV3.unity
     guid: 403c8f96da0374bd9863717336f414e9
+  - enabled: 1
+    path: Assets/LEVEL DESIGN/End Credit.unity
+    guid: 9316797e4e63e473e9679bae9e0ed746
   m_configObjects: {}

@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class winlosecondition : MonoBehaviour
 {
-    
+    public string NextLevel;
+
     public void Update()
     {
         int numberofpawn = GameObject.FindGameObjectsWithTag("pawn").Length;
@@ -14,7 +15,7 @@ public class winlosecondition : MonoBehaviour
 
         if (numberofpawn == 0)
         {
-            SceneManager.LoadScene("LV3");
+            SceneManager.LoadScene(NextLevel);
         }
     }
 

@@ -12,6 +12,33 @@ public class RollPlus : MonoBehaviour
 
     private Vector3[] directions = new[] { Vector3.forward, Vector3.back, Vector3.left, Vector3.right };
 
+    [Header("Paticle System")]
+    public ParticleSystem PlayerDeath;
+
+    public GameObject GameoverCanvas;
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            ParticleSystem particle = Instantiate(PlayerDeath, transform.position, Quaternion.identity);
+            particle.Play();
+            Destroy(gameObject);
+            GameOver();
+
+            //SceneManager.LoadScene("Main Menu");
+            print("ENTER");
+
+        }
+    }
+
+    public void GameOver()
+    {
+        GameoverCanvas.SetActive(true);
+
+    }
+
     void Update()
     {
 
